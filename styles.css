@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Handwritten';
+  src: url('assets/Handwrittendemo-1Gq4M.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: #fafafa;
+  padding: 16px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Handwritten', cursive;
+  font-size: 28px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+nav a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+}
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 48px 20px;
+}
+.hero h1 {
+  font-size: 48px;
+  color: #1E3A5F;
+  margin-bottom: 8px;
+  font-family: 'Handwritten', cursive;
+  font-size: 150px;
+  font-weight: normal;
+}
+.hero p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Globe */
+.globe-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  margin: 0 auto;
+  margin-bottom: 200px; 
+  transform-origin: center center; 
+  will-change: transform;
+}
+#globe {
+  width: 400px;
+  height: auto;
+  max-width: 90vw;
+}
+
+/* Scroll Section */
+.scroll-section {
+  height: 200vh;
+}
+
+/* Country Maps Section */
+.maps-section {
+  position: relative;
+  padding: 40px 20px;
+  margin-top: 40px; 
+  height: 400px;
+  width: 100%;
+  margin-bottom: 60px; 
+}
+.map-card {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-card img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Map Sizes */
+.map-card img.map-usa {
+  width: 360px;
+  max-width: 90vw;
+}
+.map-card img.map-france {
+  width: 300px;
+  max-width: 90vw;
+}
+.map-card img.map-india {
+  width: 320px;
+  max-width: 90vw;
+}
+.map-card img.map-japan {
+  width: 280px;
+  max-width: 90vw;
+}
+
+/* Map hover effect */
+.map-card img:hover {
+  filter: drop-shadow(0 0 18px #1E3A5F) brightness(1.08);
+  transform: scale(1.08);
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #fafafa;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
