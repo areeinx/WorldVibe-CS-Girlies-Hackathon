@@ -33,18 +33,43 @@
       <p>Explore the United States- landscapes, history, and culture.</p>
     </section>
 
-    <section style="max-width:900px;margin:30px auto;padding:20px;">
-      <h2 class="font-display">Welcome to the USA</h2>
-      <p class="text-secondary">STILL BUILDING!!</p>
-
-      <div style="margin-top:18px;">
-        <a href="index.html" class="btn-primary" style="display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;">Back to Home</a>
+    <div class="smooth-carousel" id="carousel-usa" tabindex="0">
+      <div class="slider-container">
+        <a href="usa-overview.html" class="carousel-slide">
+          <img src="assets/usa map.svg" alt="USA Overview">
+          <h3>USA — Overview</h3>
+          <p>Explore cities, national parks, and regional cultures.</p>
+        </a>
+        <a href="usa-culture.html" class="carousel-slide">
+          <img src="assets/usa stamp.svg" alt="USA Culture">
+          <h3>Culture</h3>
+          <p>A melting pot of cuisines, music, and local traditions.</p>
+        </a>
+        <a href="usa-food.html" class="carousel-slide">
+          <img src="assets/usa map.svg" alt="American Cuisine">
+          <h3>Food</h3>
+          <p>Regional favorites from BBQ to seafood and comfort food.</p>
+        </a>
+        <a href="usa-landmarks.html" class="carousel-slide">
+          <img src="assets/usa stamp.svg" alt="USA Landmarks">
+          <h3>Landmarks</h3>
+          <p>Grand Canyon, Statue of Liberty, national parks and more.</p>
+        </a>
+        <a href="usa-travel.html" class="carousel-slide">
+          <img src="assets/usa map.svg" alt="Plan a Visit">
+          <h3>Plan a Visit</h3>
+          <p>Best times to visit, routes, and travel tips.</p>
+        </a>
       </div>
-    </section>
+      <button class="carousel-prev">‹</button>
+      <button class="carousel-next">›</button>
+    </div>
+    <div class="carousel-dots"></div>
   </main>
 
   <footer>
     <p>&copy; 2024 WorldVibe. All rights reserved.</p>
   </footer>
+  <script src="slider.js"></script>
 </body>
 </html>

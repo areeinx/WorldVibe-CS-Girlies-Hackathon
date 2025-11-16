@@ -33,18 +33,43 @@
       <p>Explore France- art, cuisine, and history.</p>
     </section>
 
-    <section style="max-width:900px;margin:30px auto;padding:20px;">
-      <h2 class="font-display">Welcome to France</h2>
-      <p class="text-secondary">STILL BUILDING!!</p>
-
-      <div style="margin-top:18px;">
-        <a href="index.html" class="btn-primary" style="display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;">Back to Home</a>
+    <div class="smooth-carousel" id="carousel-france" tabindex="0">
+      <div class="slider-container">
+        <a href="france-overview.html" class="carousel-slide">
+          <img src="assets/france map.svg" alt="France Overview">
+          <h3>France — Overview</h3>
+          <p>Discover the geography and regions of France, from the Riviera to the Alps.</p>
+        </a>
+        <a href="france-culture.html" class="carousel-slide">
+          <img src="assets/france stamp.svg" alt="France Culture">
+          <h3>Culture & Heritage</h3>
+          <p>Art, architecture and museums: Paris and beyond.</p>
+        </a>
+        <a href="france-cuisine.html" class="carousel-slide">
+          <img src="assets/france map.svg" alt="French Cuisine">
+          <h3>Cuisine</h3>
+          <p>From boulangeries to Michelin-starred restaurants.</p>
+        </a>
+        <a href="france-landmarks.html" class="carousel-slide">
+          <img src="assets/france stamp.svg" alt="France Landmarks">
+          <h3>Landmarks</h3>
+          <p>Iconic sights like the Eiffel Tower and Mont Saint-Michel.</p>
+        </a>
+        <a href="france-travel.html" class="carousel-slide">
+          <img src="assets/france map.svg" alt="Plan a Visit">
+          <h3>Plan a Visit</h3>
+          <p>Tips for travel, seasons, and local customs.</p>
+        </a>
       </div>
-    </section>
+      <button class="carousel-prev">‹</button>
+      <button class="carousel-next">›</button>
+      <div class="carousel-dots"></div>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2024 WorldVibe. All rights reserved.</p>
   </footer>
+  <script src="slider.js"></script>
 </body>
 </html>
