@@ -7,45 +7,70 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>      
-    <header>
-        <div class="logo">WorldVibe</div>
-        <nav>
-            <ul>
-                <li><a href="#maps">Countries</a></li>
-                <li><a href="#passport">Passport</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">WorldVibe</div>
+    <nav>
+      <ul>
+        <li><a href="#countries">Countries</a></li>
+        <li><a href="#passport">Passport</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="home" class="hero">
-        <h1>WorldVibe</h1>
-        <p>Turning Worldwide wonder into Worldvibe energy.</p>
-    </section>
+  <!-- Landing -->
+  <section id="landing" class="page hero">
+    <h1>WorldVibe</h1>
+    <p>Turning Worldwide wonder into Worldvibe energy.</p>
+  </section>
 
+  <!-- Globe -->
+  <section id="globe" class="page">
     <div class="globe-container" id="globeContainer">
-      <img id="globe" src="assets/globe.gif" alt="Globe" />
+    <img id="globe" src="assets/globe.gif" alt="Globe" />
     </div>
+  </section>
 
-    <section class="maps-section">
+  <!-- Countries -->
+  <section id="countries" class="page maps-section">
       <!-- USA Map -->
       <div class="map-card" style="top: 150px; left: 280px;">
-        <img class="map-usa" src="assets/usa map.svg" alt="USA Map" />
+        <a href="usa.html" title="Explore USA">
+          <img class="map-usa" src="assets/usa map.svg" alt="USA Map" />
+        </a>
       </div>
 
       <!-- France Map -->
       <div class="map-card" style="top: 120px; left: 40px;">
-        <img class="map-france" src="assets/france map.svg" alt="France Map" />
+        <a href="france.html" title="Explore France">
+          <img class="map-france" src="assets/france map.svg" alt="France Map" />
+        </a>
       </div>
 
       <!-- India Map -->
       <div class="map-card" style="top: 140px; right: 20px;">
-        <img class="map-india" src="assets/india map.svg" alt="India Map" />
+        <a href="india.html" title="Explore India">
+          <img class="map-india" src="assets/india map.svg" alt="India Map" />
+        </a>
       </div>
 
       <!-- Japan Map -->
       <div class="map-card" style="top: 170px; right: 400px;">
-        <img class="map-japan" src="assets/japan map.svg" alt="Japan Map" />
+        <a href="japan.html" title="Explore Japan">
+          <img class="map-japan" src="assets/japan map.svg" alt="Japan Map" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Passport -->
+    <section id="passport" class="page" style="padding:40px;">
+      <div class="passport-content">
+        <div class="passport-left">
+          <img src="assets/passport.svg" alt="Passport" class="passport-image" />
+        </div>
+        <div class="passport-right">
+          <h2>Your Passport</h2>
+          <p>Collect stamps from countries you explore. (Placeholder)</p>
+        </div>
       </div>
     </section>
 

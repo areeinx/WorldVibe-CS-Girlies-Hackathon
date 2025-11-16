@@ -55,10 +55,21 @@ nav a:hover {
   opacity: 0.7;
 }
 
+.page {
+  min-height: 100vh;
+  padding: 36px 18px; 
+  display: block;
+}
+
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 48px 20px;
+  padding: 28px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
 }
 .hero h1 {
   font-size: 48px;
@@ -77,19 +88,22 @@ nav a:hover {
 .globe-container {
   position: relative;
   width: 100%;
+  max-width: 1200px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0 10px 0; 
   margin: 0 auto;
-  margin-bottom: 200px; 
-  transform-origin: center center; 
+  margin-bottom: 80px; 
+  transform-origin: center center;
   will-change: transform;
 }
 #globe {
   width: 400px;
   height: auto;
   max-width: 90vw;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Scroll Section */
@@ -142,6 +156,14 @@ nav a:hover {
   transform: scale(1.08);
   transition: transform 0.2s, filter 0.2s;
   cursor: pointer;
+}
+
+/* Passport image */
+.passport-image {
+  width: 260px;
+  max-width: 80%;
+  display: block;
+  margin: 18px auto;
 }
 
 /* Footer */
