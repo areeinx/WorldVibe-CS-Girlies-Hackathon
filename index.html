@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorldVibe</title>
     <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
 </head>
 <body>      
   <header>
-    <div class="logo">WorldVibe</div>
+    <div class="logo">
+        <a href="index.html" style="text-decoration:none;color:inherit;">
+            WorldVibe<img src="assets/plane1.svg" alt="Plane" class="logo-icon"/></a>
+        </div>
     <nav>
       <ul>
         <li><a href="#countries">Countries</a></li>
@@ -32,31 +39,37 @@
 
   <!-- Countries -->
   <section id="countries" class="page maps-section">
+      <div class="countries-intro">
+        <h2>Countries</h2>
+        <p class="countries-tagline">Tap a Country, Let Curiosity Pack Your Bags and Learn Like a Traveler, Not a Textbook</p>
+        <p class="countries-ps">P.S. rest of the countries are coming soon (dev is sprinting)</p>
+      </div>
+
       <!-- USA Map -->
-      <div class="map-card" style="top: 150px; left: 280px;">
+      <div class="map-card" style="top: 400px; left: 170px;">
         <a href="usa.html" title="Explore USA">
           <img class="map-usa" src="assets/usa map.svg" alt="USA Map" />
         </a>
       </div>
 
       <!-- France Map -->
-      <div class="map-card" style="top: 120px; left: 40px;">
+      <div class="map-card" style="top: 280px; left: 460px;">
         <a href="france.html" title="Explore France">
           <img class="map-france" src="assets/france map.svg" alt="France Map" />
         </a>
       </div>
 
-      <!-- India Map -->
-      <div class="map-card" style="top: 140px; right: 20px;">
-        <a href="india.html" title="Explore India">
-          <img class="map-india" src="assets/india map.svg" alt="India Map" />
+      <!-- Japan Map -->
+      <div class="map-card" style="top: 280px; right: 400px;">
+        <a href="japan.html" title="Explore Japan">
+          <img class="map-japan" src="assets/japan map.svg" alt="Japan Map" />
         </a>
       </div>
 
-      <!-- Japan Map -->
-      <div class="map-card" style="top: 170px; right: 400px;">
-        <a href="japan.html" title="Explore Japan">
-          <img class="map-japan" src="assets/japan map.svg" alt="Japan Map" />
+      <!-- India Map -->
+      <div class="map-card" style="top: 340px; right: 130px;">
+        <a href="india.html" title="Explore India">
+          <img class="map-india" src="assets/india map.svg" alt="India Map" />
         </a>
       </div>
     </section>
