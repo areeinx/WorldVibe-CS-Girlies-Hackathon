@@ -79,6 +79,9 @@
       <div class="passport-content">
         <div class="passport-left">
           <img src="assets/passport.svg" alt="Passport" class="passport-image" />
+          <div id="stampsContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+            <!-- Stamps will be added here dynamically -->
+          </div>
         </div>
         <div class="passport-right">
           <h2>Your Passport</h2>
@@ -92,4 +95,32 @@
     </footer>
 </body>
 <script src="script.js"></script>
+<script>
+  // Load stamps from localStorage when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    const countries = ['france', 'usa', 'india', 'japan'];
+    const stampsContainer = document.getElementById('stampsContainer');
+    
+    if (stampsContainer) {
+      countries.forEach(country => {
+        const stampSrc = localStorage.getItem(`stamp-${country}`);
+        if (stampSrc && !document.getElementById(`stamp-${country}`)) {
+          const stampImg = document.createElement('img');
+          stampImg.id = `stamp-${country}`;
+          stampImg.src = stampSrc;
+          stampImg.alt = `${country} stamp`;
+          stampImg.style.position = 'absolute';
+          stampImg.style.width = '25%';
+          stampImg.style.height = 'auto';
+          stampImg.style.top = stampPositions[country].top;
+          stampImg.style.left = stampPositions[country].left;
+          stampImg.style.transform = `rotate(${stampPositions[country].rotation})`;
+          stampImg.style.filter = 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))';
+          
+          stampsContainer.appendChild(stampImg);
+        }
+      });
+    }
+  });
+</script>
 </html>

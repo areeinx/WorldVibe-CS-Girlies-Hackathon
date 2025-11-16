@@ -35,7 +35,7 @@
       this.slideWidth = this.slides[0].offsetWidth;
       this.createDots();
       this.attachEventListeners();
-      this.goToSlide(0);
+      this.goToSlide(2);
     }
 
     createDots() {

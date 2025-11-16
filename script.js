@@ -2,6 +2,23 @@ function lerp(start, end, t) {
   return start * (1 - t) + end * t;
 }
 
+// Stamp positions for each country on passport (in percentages for responsive sizing)
+const stampPositions = {
+  france: { top: '12%', left: '8%', rotation: '-15deg' },
+  usa: { top: '18%', left: '30%', rotation: '12deg' },
+  india: { top: '8%', left: '55%', rotation: '-8deg' },
+  japan: { top: '20%', left: '70%', rotation: '18deg' }
+};
+
+// Function to add stamp to passport
+window.addStampToPassport = function(country, stampSrc) {
+  // Store the stamp data in localStorage
+  localStorage.setItem(`stamp-${country}`, stampSrc);
+  
+  // Redirect to home page with hash to scroll to passport
+  window.location.href = 'index.html#passport';
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const globeContainer = document.getElementById('globeContainer');
   const globeSection = document.getElementById('globe');

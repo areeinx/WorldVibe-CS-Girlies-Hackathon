@@ -52,6 +52,9 @@
           The Golden Temple in Amritsar, Meenakshi Temple in Madurai, and temples in Khajuraho showcase 
           India's architectural and spiritual heritage across different regions and faiths.
         </p>
+        <div style="margin-top: 40px; text-align: center;">
+          <button id="getStampBtn" style="padding: 12px 30px; font-size: 16px; background-color: #1E3A5F; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Get Stamp</button>
+        </div>
       </div>
     </section>
   </main>
@@ -59,5 +62,17 @@
   <footer>
     <p>&copy; 2024 WorldVibe. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('getStampBtn');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          const stampSrc = 'assets/india stamp.svg';
+          window.addStampToPassport('india', stampSrc);
+        });
+      }
+    });
+  </script>
 </body>
 </html>

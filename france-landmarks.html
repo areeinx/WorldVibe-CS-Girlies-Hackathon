@@ -51,6 +51,9 @@
           The Loire Valley is famous for its Renaissance castles. Château de Chambord and Château de Chenonceau 
           are two of the most spectacular examples of French architectural heritage.
         </p>
+        <div style="margin-top: 40px; text-align: center;">
+          <button id="getStampBtn" style="padding: 12px 30px; font-size: 16px; background-color: #1E3A5F; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Get Stamp</button>
+        </div>
       </div>
     </section>
   </main>
@@ -58,5 +61,17 @@
   <footer>
     <p>&copy; 2024 WorldVibe. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('getStampBtn');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          const stampSrc = 'assets/france stamp.svg';
+          window.addStampToPassport('france', stampSrc);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
