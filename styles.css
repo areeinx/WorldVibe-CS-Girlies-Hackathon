@@ -188,6 +188,70 @@ nav a:hover {
   object-fit: contain;
 }
 
+  /* Minimal large-screen tweak: reduce gap between France and Japan maps */
+  @media (min-width: 1290px) {
+    /* move the France image slightly right and the Japan image slightly left */
+    .map-france {
+      position: relative;
+      left: 50px; /* small inward nudge */
+    }
+    .map-japan {
+      position: relative;
+      right: 80px; /* small inward nudge */
+    }
+    .map-usa {
+      position: relative;
+      left: 30px;
+    }
+    .map-india {
+      position: relative;
+      right: 75px;
+    }
+
+  .globe-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 10px 0; 
+  margin: 0 auto;
+  margin-bottom: 80px; 
+  transform-origin: center center;
+  will-change: transform;
+}
+#globe {
+  width: 600px;
+  height: auto;
+  max-width: 90vw;
+  display: block;
+  margin: 0 auto;
+}
+.hero {
+  text-align: center;
+  padding: 28px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+}
+.hero h1 {
+  font-size: 55px;
+  color: #1E3A5F;
+  margin-bottom: 8px;
+  font-family: 'Handwritten', cursive;
+  font-size: 150px;
+  font-weight: normal;
+}
+.hero p {
+  color: #555;
+  font-size: 24px;
+}
+
+  }
+
 /* Map Sizes */
 .map-card img.map-usa {
   width: 340px;

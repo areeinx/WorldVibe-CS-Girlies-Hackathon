@@ -14,7 +14,12 @@ const stampPositions = {
 window.addStampToPassport = function(country, stampSrc) {
   // Store the stamp data in localStorage
   localStorage.setItem(`stamp-${country}`, stampSrc);
-  
+  // Mark in sessionStorage so index can display these stamps once after redirect
+  try {
+    sessionStorage.setItem('showStampsOnce', '1');
+  } catch (e) {
+    // sessionStorage may be unavailable in some environments; ignore
+  }
   // Redirect to home page with hash to scroll to passport
   window.location.href = 'index.html#passport';
 };

@@ -96,12 +96,18 @@
 </body>
 <script src="script.js"></script>
 <script>
-  // Load stamps from localStorage when page loads
+  // Load stamps from localStorage when page loads, but only show them once after a redirect
   document.addEventListener('DOMContentLoaded', function() {
     const countries = ['france', 'usa', 'india', 'japan'];
     const stampsContainer = document.getElementById('stampsContainer');
-    
-    if (stampsContainer) {
+    const showOnce = (() => {
+      try { return sessionStorage.getItem('showStampsOnce'); } catch (e) { return null; }
+    })();
+
+    if (!stampsContainer) return;
+
+    if (showOnce) {
+      // If we just came from a "Get Stamp" redirect, display any stamps stored, then remove them
       countries.forEach(country => {
         const stampSrc = localStorage.getItem(`stamp-${country}`);
         if (stampSrc && !document.getElementById(`stamp-${country}`)) {
@@ -116,9 +122,20 @@
           stampImg.style.left = stampPositions[country].left;
           stampImg.style.transform = `rotate(${stampPositions[country].rotation})`;
           stampImg.style.filter = 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))';
-          
           stampsContainer.appendChild(stampImg);
+          // Remove the stored stamp so passport is cleared next time
+          try { localStorage.removeItem(`stamp-${country}`); } catch (e) {}
         }
+      });
+      try { sessionStorage.removeItem('showStampsOnce'); } catch (e) {}
+    } else {
+      // Not a recent redirect — ensure passport is clear for all users
+      countries.forEach(country => {
+        // remove any stored stamps
+        try { localStorage.removeItem(`stamp-${country}`); } catch (e) {}
+        // remove any existing DOM stamps if present
+        const el = document.getElementById(`stamp-${country}`);
+        if (el && el.parentNode) el.parentNode.removeChild(el);
       });
     }
   });
